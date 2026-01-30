@@ -1,0 +1,1893 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/* font Museum */
+@font-face {
+    font-family: 'MuseumCulturalFoundationClassic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MuseumCulturalFoundationClassic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식M.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MuseumCulturalFoundationClassic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+/* font cafe24proslim */
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+	font-family: "Noto Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #101820; /* Pantone Black 6 C */
+	/* font-family: "Kalnia", serif; */
+	/* font-family: "Noto Sans", sans-serif; */
+	/* font-family: "Noto Sans KR", sans-serif; */
+	/* font-family: "Gloock", serif; */
+	
+	/* Spindle(header color)#BBC7DB */
+	/* Aliceblue(white font)#F9FDFF */
+	/* Polo blue #88B0CD */
+	/* Matisse(slide bt color)#3E5C71 */
+	/* Pattens Blue(body bg color)#D4E4F1 */
+	/* Montana(gray font)#383C3E */
+	/* Sail(brighten than Polo)#A6CBE6 */
+}
+
+/* menu */
+#menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #BBC7DB73;
+	backdrop-filter: blur(10px);
+}
+
+#menu li {
+	width: 20%;
+	text-align: center;
+}
+
+#menu li a {
+	font-weight: 400;
+	display: inline-block;
+	margin: 20px 0;
+	font-size: 20px;
+	position: relative;
+	color: #F9FDFF;    
+	text-transform: uppercase;
+}
+
+#menu li a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #F9FDFF;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: 0.7s;
+}
+
+#menu li a:hover::before,
+#menu li.active a::before {
+	transform: scaleX(1);
+}
+
+/* text */
+h1 {
+	font-size: 38px;
+	/* line-height: 50px; */
+	font-family: "Kalnia", serif;
+	font-weight: 500;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+	font-size: 24px;
+	/* line-height: 35px; */
+	padding: 70px 0 40px;
+	letter-spacing: -1px;
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 500;
+}
+
+h3 {
+	font-family: "Kalnia", serif;
+	font-weight: 400;
+	font-size: 18px;
+	/* line-height: 30px; */
+	/* padding-bottom: 0.5em; */
+}
+h4{
+	display: inline-block;
+	font-weight: 400;
+	letter-spacing: -1px;
+	font-size: 16px;
+	background-color: #88B0CD;
+	color: #F9FDFF;
+	padding: 2px 8px;
+	border-radius: 30px;
+	margin-left: 14px;
+}
+
+h6 {
+	font-size: 12px;
+	line-height: 22px;
+	padding-bottom: 0.3em;
+}
+
+/* section box */
+.section {
+	overflow: hidden;
+}
+
+/* inner box */
+.inner {
+	width: 1000px;
+	margin: auto;
+}
+
+/* 1 */
+#section1 {
+	background-color: #D4E4F1;
+	text-align: center;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro p {
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	font-family: "Cormorant", serif;
+}
+
+/* 2 */
+#section2 {
+	background-color: #D4E4F1;
+}
+
+.fp-controlArrow.fp-prev {
+	left: calc(50% - 600px);
+	top: calc(50% - -50px);
+}
+
+.fp-controlArrow.fp-next {
+	right: calc(50% - 600px);
+	top: calc(50% - -50px);
+}
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px 0;
+	margin-top: 70px;
+}
+
+.portfolio li {
+	width: 32%;
+	height: 260px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(62, 92, 113, 0.7);
+	border-radius: 20px;
+	transition: 0.7s;
+	padding-top: 10px;
+}
+
+.portfolio li:hover {
+	background-color: rgba(136, 176, 205, 0.6);
+	transform: translateY(-10px);
+}
+.portfolio li:hover img{
+	transform: scale(1.03);
+	transition: all 0.5s;
+	opacity: 1;
+}
+.portfolio_imgbox{
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #F9FDFF;
+	border-radius: 13px;
+	box-shadow: inset 0 0 15px #F9FDFF;
+	overflow: hidden;
+}
+.portfolio img {
+	width: 100%;
+	object-fit: cover;
+	transform: scale(1);
+	transition: all 0.5s;
+	opacity: 0.85;
+}
+
+.portfolio h3 {
+	color: #F9FDFF;  
+	text-shadow: 0 0 5px #3e5c71;
+	margin: 15px 0 15px;
+}
+
+
+
+/* 3 */
+#section3 {
+	/* min-height: 100vh; */
+background-color: #D4E4F1;
+}
+#section3 .inner {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+#section3 h3{
+	font-size: 20px;
+	color: #3E5C71;
+	margin: 15px 0;
+}
+#section3 h3 span{
+	font-size: 16px;
+	font-weight: 500;
+}
+/* swiper가 있는 섹션만 fullpage 영향 해제 */
+/* .swiper-section,
+.swiper-section .fp-tableCell {
+  display: block !important;
+  height: auto !important;
+} */
+/* .swiper-section {
+  height: auto !important;
+} */
+.art_swiper_wrap{
+	width: min(1000px, 92vw);
+  margin: 0 auto;
+  overflow: hidden; /* 보여줄 개수 제한 */
+}
+/* 3D 효과 살아나게 */
+.swiper-wrapper {
+  transform-style: preserve-3d;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.art_swiper {
+  width: 100%;
+  /* max-width: 1000px; */
+  height: 340px;     /* 슬라이드보다 살짝 크게 */
+  overflow: visible !important;
+}
+:root{
+  --art-slide: 300px;
+}
+
+#section3 .swiper-slide{
+  width: var(--art-slide) !important;
+  height: var(--art-slide) !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+#section3 .swiper-slide img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+/* 기본 점 */
+.art_swiper .swiper-pagination-bullet {
+  background: #3E5C71; /* 원하는 색 */
+  opacity: 0.4;
+}
+
+/* 활성화된 점 */
+.art_swiper .swiper-pagination-bullet-active {
+  background: #3E5C71;
+  opacity: 1;
+}
+
+/* 4 */
+#section4 {
+	background-color: #D4E4F1;
+}
+
+#section4 .fp-tableCell{
+	display: block;
+}
+
+#section4 .inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.self_photo {
+	width: 50%;
+	height: 110%;
+	object-fit: cover;
+	object-position: top center;
+}
+
+.about {
+	width: 50%;
+	text-align: center;
+	position: relative;
+}
+.about h2{
+	font-family: 'Cafe24ProSlim';
+	letter-spacing: 1px;
+	font-weight: 400;
+	line-height: 1.3em;
+}
+.about h2 .blue{
+	color: #3E5C71;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.about .bold{
+	font-weight: bold;
+}
+.about h2 .light{
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+	opacity: 0.8;
+}
+.about p .serif{
+	font-family: 'MuseumCulturalFoundationClassic';
+	font-weight: lighter;
+	font-size: 16px;
+	background-color: #3E5C71;
+	color: #F9FDFF;
+	padding: 4px 10px;
+}
+.about p{
+	letter-spacing: -0.5px;
+	/* font-family: 'MuseumCulturalFoundationClassic'; */
+	color: #383C3E;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.waves {
+  position:absolute;
+  bottom: -290px;
+  left: 0;
+  width: 100%;
+  height:100vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:200px;
+  max-height:270px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+
+/* 5 */
+#section5 {
+	background-color: #D4E4F1;
+}
+.resume_intro{
+  flex: 0 0 32.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resume_icon{
+	margin-top: 20px;
+	text-align: center;
+}
+.resume_icon img{
+	display: block;
+	margin: 0 auto;
+}
+.resume_icon1 { /* icon */
+	animation: floating 3s infinite ;
+}
+.resume_icon2 { /* icon shadow */
+	animation: shadow_floating 3s infinite;
+}
+@keyframes floating{
+	0%{
+		transform: translateY(0);
+		transition: ease-in-out;
+	}
+	50%{
+		transform: translateY(10px);
+		transition: ease-in-out;
+	}
+	100%{
+		transform: translateY(0);
+		transition: ease-in-out;
+	}
+}
+@keyframes shadow_floating{
+	0%{
+		transform: translateY(10px);
+		transition: ease-in-out;
+		opacity: 0.6;
+	}
+	50%{
+		transform: translateY(3px) scale(0.8);
+		transition: ease-in-out;
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(10px);
+		transition: ease-in-out;
+		opacity: 0.6;
+	}
+}
+
+/* timeline */
+.resume_timeline_wrap{
+  flex: 1;
+}
+.timeline{
+  /* max-width: 1100px; */
+  margin: 0 auto;
+}
+
+/* 타임라인 래퍼 */
+.tl{
+  position: relative;
+  display: grid;
+  gap: 50px; /* 항목 간 세로 간격 */
+}
+
+/* 가운데 라인 */
+.tl::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom,#A6CBE6,#88B0CD);
+}
+#section5 .tl::before{
+  top: -30px;
+  bottom: -280px;
+}
+#section6 .tl::before{
+  top: -200px;   /* ⭐ 이 값이 핵심 */
+  bottom: -200px;
+background: linear-gradient(to top,#A6CBE6,#88B0CD);
+}
+
+/* 각 아이템: 3컬럼(왼쪽 / 가운데 / 오른쪽) */
+.item{
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr; /* 가운데 px가 라인/점 공간 */
+  align-items: center;
+  position: relative;
+}
+
+/* 점 */
+.dot{
+	position: absolute;
+  left: 50%;                 /* 중앙 라인 */
+  top: 0px;                 /* 원하는 높이 */
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg,#fff,#ffffff00) border-box,
+    rgba(136,176,205) padding-box;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 4px rgba(166, 203, 230, 0.4);
+}
+.tl_dot1,.tl_dot2,.tl_dot3{
+	margin-top: 30px;
+}
+
+/* 카드 */
+.resume_box{
+  position: relative;
+  padding: 26px 28px;
+  border-radius: 18px;
+  min-height: 80px;
+  overflow: visible;
+  background: linear-gradient(
+    135deg,
+    rgba(212,228,241,.8),
+    rgba(166,203,230,.8)
+  );
+
+  box-shadow: 0 0 10px #ffffff80;
+}
+
+/* border */
+.resume_box::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  padding: 1.2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #fff, #ffffff00);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  pointer-events: none;
+}
+.resume_title{
+	display: flex;
+	margin-bottom: 20px;
+}
+.resume_title h3{
+	/* font-family: 'MuseumCulturalFoundationClassic'; */
+	font-family: "Noto Sans KR", "Noto Sans", sans-serif;
+	font-weight: 500;
+	letter-spacing: -1px;
+}
+.resume_box .gray{
+	opacity: 0.7;
+}
+
+/* 좌/우 배치 */
+.item.left .resume_box{
+  grid-column: 1;
+  justify-self: end;
+  width: min(420px, 100%);
+  border-top-right-radius: 24px; /* 모서리 감각 살리고 싶으면 */
+ text-align: right;
+}
+.item.left .resume_box .resume_title{
+	justify-content: right;
+}
+
+.item.right .resume_box{
+  grid-column: 3;
+  justify-self: start;
+  width: min(520px, 100%);
+}
+
+
+/* 6 */
+#section6{
+	background-color: #D4E4F1;
+}
+.resume_wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.resume-continue .resume_timeline_wrap{
+  flex: 1;
+  padding-top: 40px;   /* 살짝 여유만 */
+}
+.resume-continue .item:first-child .dot{
+  margin-top: 0;
+}
+#section6 .timeline{
+  margin-top: 50px;  /* 전체를 자연스럽게 아래로 */
+}
+#section6 .tl_dot_top{
+	margin-top: 30px;
+}
+/* 5&6공통 */
+#section5 .resume_box,
+#section6 .resume_box {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+/* 7 */
+#section7 {
+  background-color: #D4E4F1;
+}
+.skills_wrap{
+	margin-top: 100px;
+}
+.skills {
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* 바깥 컨테이너 */
+.circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  /* --angle: 360deg; */
+}
+
+.circle_graph {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      from 0deg,                 /* 12시 시작 */
+      #BBC7DB 0deg,
+      #BBC7DB var(--angle),        /* 아직 안 찬 부분 */
+      #88B0CD var(--angle),
+      #88B0CD 360deg               /* 채워진 부분 */
+    );
+	position: relative;
+}
+
+.circle_graph::after {
+  content: "";
+  width: 108px;
+  height: 108px;
+  background: #D4E4F1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #3E5C71;
+}
+
+.percent {
+	font-family: "Gloock", serif;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.label {
+	font-family: "Kalnia", serif;
+  margin-top: 30px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+/* bar more skills */
+#section7 h2{
+	color: #383C3E ;
+	font-size: 24px;
+	letter-spacing: -0.3px;
+	margin-top: 120px;
+}
+.bar_skills {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.bar_row {
+  display: flex;
+  gap: 40px;
+}
+
+.bar_item {
+  flex: 1;
+}
+
+.bar_label {
+font-weight: 500;
+  margin-bottom: 8px;
+  color: #3E5C71;
+  line-height: 16px;
+}
+
+.bar_wrap {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #BBC7DB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar_fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #88B0CD;
+  border-radius: 10px;
+  /* transition: width 1s ease-out; */
+}
+
+.bar_percent {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #3E5C71;
+}
+
+
+/* 8 */
+#section8{
+	background-color: rgba(167, 204, 230, 0.75);
+}
+.myContent {
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+/* footer util */
+.footer{
+	display: flex;
+	gap: 100px;
+	position: absolute;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+}
+.footer li{
+	/* width: 45%; */
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.call, .mail{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.footer li img{
+	display: block;
+	height: 60px;
+	width: auto;
+	opacity: 0.7;
+	transition: opacity 0.3s ease;
+}
+.footer li:hover img{
+	opacity: 1;
+}
+
+.footer_text h3{
+	color: rgba(62, 92, 113);
+	font-size: 20px;
+	font-weight: 500;
+}
+.footer_text p{
+	font-size: 14px;
+	color: rgba(62, 92, 113, 0.8);
+	letter-spacing: -0.7px;
+}
+/* sns flex detail */
+.sns_personal, .sns_marketing{
+	color: rgba(62, 92, 113, 0.8);
+	display: flex;
+	/* flex-direction: column; */
+	align-items: flex-start;
+	gap: 5px;
+}
+.sns_personal h5{
+	margin-right: 12px;
+}
+.sns_link a{
+	display: block;
+	text-align: left;
+	font-size: 14px;
+	padding-left: 40px;
+	opacity: 0.75;
+	transition: opacity 0.3s ease;
+}
+.sns_link a:hover{
+	opacity: 1;
+}
+.insta{
+	background: url(../images/insta.png) no-repeat left 20px center ;
+}
+.blog{
+	background: url(../images/blog.png) no-repeat left 20px center ;
+}
+.youtube{
+	background: url(../images/youtube.png) no-repeat left 20px center ;
+}
+
+.footer_text h5{
+	font-family: "Kalnia", serif;
+	font-size: 16px;
+	letter-spacing: -0.7px;
+	font-weight: 500;
+}
+
+.copyright {
+	position: absolute;
+	left: 50%;
+	top: 85%;
+	transform: translate(-50%, -50%);
+	color: rgba(62, 92, 113, 0.7);
+	font-size: 14px;
+	letter-spacing: -1px;
+}
+
+
+/* popup */
+.popup {
+	position: fixed;
+  inset: 0;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.popup>p {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	font-size: 35px;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.popup>div {
+	width: 80%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	max-width: 800px;
+}
+.popup_imgbox{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.popup_imgbox img{
+	width: 48%;
+	display: block;
+}
+
+/* .popup img {
+	width: 60%;
+	display: block;
+} */
+
+.popup ul {
+	margin: 0;
+	padding: 30px;
+	width: 20%;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #222;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.popup h5 {
+	font-size: 20px;
+	padding-bottom: 10px;
+	color: #222;
+	font-weight: bold;
+}
+
+/* animation */
+@keyframes left {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes right {
+	0% {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes bottom {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.fp-viewing-anchor2-0 .portfolio,
+.fp-viewing-anchor2-1 .portfolio,
+.fp-viewing-anchor3 .art,
+.fp-viewing-anchor5 .resume,
+.fp-viewing-anchor5 .skills{
+	animation: bottom 1s 0.3s both;
+}
+
+.fp-viewing-anchor1 .intro .intro_text {
+	animation: right 1s 0.6s both;
+}
+
+.fp-viewing-anchor4 #section4 img {
+	animation: left 1s 0.3s both;
+}
+
+.fp-viewing-anchor4 #section4 .about {
+	animation: right 1s 0.6s both;
+}
+
+/* 1300px 이하 */
+@media (max-width:1300px) {
+	.fp-controlArrow.fp-prev {
+		border-width: 20px 18px 20px 0;
+		left: calc(50% - 490px);
+		top: calc(50% - -80px);
+		border-color: transparent #747474 transparent transparent;
+	}
+
+	.fp-controlArrow.fp-next {
+		border-width: 20px 0 20px 18px;
+		right: calc(50% - 490px);
+		top: calc(50% - -80px);
+		border-color: transparent transparent transparent #747474;
+	}
+	#section2 h1{
+  margin-top: 0;      /* 핵심 */
+  padding-top: 10px;  /* 필요하면 조절 */
+  line-height: 1.1;   /* 글꼴에 따라 윗부분 여유 확보 */
+}
+.resume_timeline_wrap{
+	width: 100%;
+	margin: 0 auto;
+
+}
+}
+
+/* 1100px 이하 */
+@media (max-width:1100px) {
+	.inner {
+		width: 90%;
+	}
+
+	#section1{
+		height: 100vh !important;
+	}
+
+	#section2,
+	#section3,
+	#section4, #section5,#section8,
+	.fp-tableCell {
+		height: auto !important;
+	}
+
+	#section1,
+	#section2,
+	#section4,
+	#section5,
+	#section8 {
+		padding: 5em 0;
+	}
+
+	.fp-tableCell {
+		padding-bottom: 10px;
+	}
+
+	.fp-controlArrow.fp-prev {
+		left: 7%;
+		top: 62%;
+		border-color: transparent #747474 transparent transparent;
+	}
+
+	.fp-controlArrow.fp-next {
+		right: 7%;
+		top: 62%;
+		border-color: transparent transparent transparent #747474;
+	}
+	/* 기존 */
+
+	.portfolio .portfolio_imgbox{
+		width: 95%;
+		overflow: hidden;
+		border-radius: 15px;
+	}
+	.portfolio_imgbox img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+	.portfolio li:hover .portfolio_imgbox img{
+		transform: scale(1.03);
+	}
+	/* section2 portfolio */
+#section3{
+	padding: 3em 0;
+}
+
+#section1, #section4, #section2, #section3, #section8{
+    padding: 0 !important;          /* 5em 0 때문에 섹션이 길어지는 거 차단 */
+}
+
+#section3 .inner{
+  padding-top: clamp(70px, 8vh, 100px);
+  /* padding-bottom: 10px; */
+  padding-top: 60px;
+  /* box-sizing: border-box; */
+}
+
+.swiper{
+  padding-top: clamp(10px, 2vh, 20px);
+  padding-bottom: clamp(10px, 2vh, 20px);
+  /* background-color: yellow; */
+}
+
+.art_swiper{
+  height: clamp(220px, 42vh, 340px);
+}
+
+/* 슬라이드 카드 크기도 살짝 유동으로 */
+:root{
+  --art-slide: clamp(220px, 28vw, 300px);
+}
+/* section3 artwork */
+
+  /* section4는 다시 '화면 높이'를 기준으로 잡아주기 */
+  #section4{
+    padding: 0 !important;          /* 5em 0 때문에 섹션이 길어지는 거 차단 */
+  }
+  #section4 .fp-tableCell{
+    height: 100vh !important;       /* auto로 풀어버리면 fullPage에서 겹침 생김 */
+    display: flex !important;
+  }
+  #section4 .inner{
+    height: 100% !important;
+    align-items: stretch !important; /* center -> stretch로 바닥까지 채우게 */
+  }
+
+  /* about 박스가 섹션 높이를 꽉 채우게 */
+  #section4 .about{
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         /* 텍스트는 중앙 유지 */
+    padding-bottom: 0 !important;    /* padding-bottom으로 높이 늘리는 방식 금지 */
+  }
+#section4 .about h2,
+#section4 .about p{
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: center;
+}
+  /* waves는 about 하단(=섹션 하단)에 정확히 붙음 */
+  #section4 .waves{
+    bottom: 0 !important;
+    height: 220px !important;
+    margin-bottom: 0 !important;
+    transform: translateY(28%) !important; /* 20~35% 조절 */
+  }
+
+  /* 사진도 110%면 넘침 유발 */
+  #section4 .self_photo{
+    height: 100% !important;
+  }
+
+  /* 섹션 밖으로 못 튀어나가게 */
+  #section4, #section4 .fp-tableCell, #section4 .inner, #section4 .about{
+    overflow: hidden !important;
+  }
+
+.resume_timeline_wrap{
+	width: 90%;
+	margin: 0 auto;
+}
+  #section5 .resume_box h3, #section6 .resume_box h3{
+    font-size: clamp(16px, 1.6vw, 18px);
+    line-height: 1.25;
+  }
+
+  #section5 .resume_box h4, #section6 .resume_box h4{
+    font-size: clamp(14px, 1.3vw, 16px);
+    padding: 2px 7px;
+    margin-left: 10px;
+  }
+
+  #section5 .resume_box p, #section6 .resume_box p{
+    font-size: clamp(14px, 1.25vw, 14px);
+    line-height: 1.55;
+  }
+    /* 제목줄이 좁아지면 줄바꿈 자연스럽게(겹침/잘림 방지) */
+  #section5 .resume_title, #section6 .resume_title{
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+ /* 연결선 */
+  #section5 .timeline, #section6 .timeline{
+  padding-top: 30px; /* 선 시작을 아래로 내리는 여유 */
+}
+  #section5 .tl::before{
+    top: 30px;
+    bottom: -340px; /* 길이 늘리고 싶으면 -380, -420... */
+  }
+    #section6 .tl::before{
+    top: -200px;     /* 원래 설계값 복구(연결 핵심) */
+    bottom: -240px;  /* 필요시 조절 */
+  }
+#section5 .tl::before{ bottom: -560px; }
+/* 혹시 겹칠 때를 대비해 레이어 정리 */
+#section5 .tl::before, #section6 .tl::before{ z-index: 0; }
+#section5 .dot, #section6 .dot{ z-index: 2; }
+#section5 .resume_box, #section6 .resume_box{ z-index: 2; }
+#section5 .resume_icon, #section6 .resume_icon{ position: relative; z-index: 3; }
+/* section5 & seciton6 resume */
+
+#section7 .skills_wrap, .bar_skills{
+	width: 95%;
+}
+  /* 위쪽 여백 */
+  #section7 .skills_wrap{
+    margin-top: clamp(50px, 6vw, 100px);
+  }
+ /* 동그라미(상단) 아이템들 간격 */
+  #section7 .skills{
+    gap: clamp(12px, 3vw, 32px);
+  }
+  #section7 .skill{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(16px, 3vw, 28px);   /* 가로 간격 */
+    row-gap: clamp(70px, 8vw, 120px); /* ✅ 줄 간격(윗줄 라벨 보호) */
+    align-items: flex-start;       /* ✅ 두 번째 줄이 위로 침범하지 않게 */
+  }
+    /* 동그라미 크기도 같이 줄이기 */
+    #section7 .circle{
+    --csize: clamp(110px, 12vw, 140px);
+    width: var(--csize);
+    height: var(--csize);
+  }
+  #section7 .circle_graph{
+    width: 100%;
+    height: 100%;
+  }
+  #section7 .circle_graph::after{
+    width: calc(var(--csize) * 0.771);       /* 108/140 비율 */
+    height: calc(var(--csize) * 0.771);
+  }
+
+  #section7 .percent{
+    font-size: clamp(14px, 1.8vw, 18px);
+  }
+  #section7 .label{
+    font-size: clamp(14px, 1.8vw, 18px);
+    margin-top: clamp(18px, 2.5vw, 30px);
+  }
+    /* 바(하단) 스킬 간격 */
+  #section7 .bar_skills{
+    margin-top: clamp(20px, 3vw, 40px);
+    gap: clamp(24px, 4vw, 50px);
+  }
+  #section7 .bar_row{
+    gap: clamp(18px, 3vw, 40px);
+    flex-wrap: wrap;                          /* 너무 좁으면 2개가 아래로 내려가게 */
+  }
+  #section7 .bar_item{
+    min-width: min(420px, 100%);              /* 줄바꿈 시 보기 좋게 */
+    flex: 1;
+  }
+  #section7 .bar_wrap{
+    height: clamp(16px, 2vw, 20px);
+  }
+    /* ✅ h2 위 여백 줄이기 (둘이 같이 올라옴) */
+  #section7 h2{
+    margin-top: clamp(28px, 5vw, 60px) !important; /* 120px 대체 */
+  }
+
+  /* ✅ bar 영역도 같이 당기기 */
+  #section7 .bar_skills{
+    margin-top: clamp(12px, 2.5vw, 24px) !important;
+  }
+  /* section7 */
+  #section8{
+	width: 100%;
+  }
+    #section8 .footer{
+    width: 90%;              /* ← 100% → 90% */
+    margin: 0 auto;
+    gap: 16px;   
+	justify-content: space-between;
+  }
+  #section8 .footer li{
+    gap: 14px;
+  }
+
+}
+
+
+
+/* 899px 이하 */
+@media (max-width:899px) {
+	#menu li {
+		width: 25%;
+	}
+
+	.intro h1 {
+		padding: 1em 0 1em;
+		font-size: 38px;
+	}
+
+	.portfolio li {
+		width: 48%;
+		height: 100%;
+	}
+
+	.portfolio_text,
+	.about_text {
+		width: 100%;
+	}
+
+	.fp-controlArrow.fp-prev,
+	.fp-controlArrow.fp-next {
+		top: 60%;
+	}
+
+	.resume{
+		gap: 20px 0;
+	}
+
+	.resume li {
+		width: 49%;
+	}
+
+	.skills img {
+		width: 10%;
+	}
+	/* 기존 */
+  #section8{
+    font-size: clamp(13px, 1.4vw, 15px);
+  }
+    /* 제목 (Phone / E-mail / SNS) */
+  #section8 .footer_text h3{
+    font-size: clamp(15px, 1.8vw, 17px);
+  }
+  
+  /* 본문 텍스트 */
+  #section8 .footer_text p,
+  #section8 .footer_text a{
+    font-size: clamp(13px, 1.5vw, 15px);
+  }
+
+  /* personal / marketing */
+  #section8 .footer_text h5{
+    font-size: clamp(12px, 1.3vw, 14px);
+  }
+
+  /* 아이콘 이미지도 같이 줄이기 */
+  #section8 .footer > li img{
+	width: clamp(38px, 4.2vw, 46px);
+    height: auto;
+  }
+
+  /* 아이콘 - 텍스트 간격도 같이 축소 */
+  #section8 .footer li{
+    gap: clamp(12px, 1.5vw, 16px);
+  }
+    #section8 .footer_text p{
+    font-size: clamp(12px, 1.3vw, 14px);
+    line-height: 1.35;   /* 가독성 유지 */
+  }
+}
+
+/* 749px 이하 */
+@media (max-width:749px) {
+	h1{
+		font-size: 30px;
+	}
+	.portfolio li{
+		width: 100%;
+		height: 30%;
+	}
+	.portfolio_imgbox{
+		width: 96%;
+		height: 80%;
+	}
+	.art{
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.art li{
+		width: 100%;
+	}
+
+	.art li img{
+		width: 100%;
+	}
+
+  .popup{
+    overflow-y: auto;          /* ✅ 팝업 자체가 스크롤 컨테이너 */
+    -webkit-overflow-scrolling: touch;
+    padding: 60px 16px 24px;   /* ✅ 위: 닫기버튼 공간 / 좌우 여백 */
+    box-sizing: border-box;
+  }
+
+  /* 기존의 "가운데 정렬(top:50%, transform)" 해제하고 위로 붙이기 */
+  .popup > div{
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: 100% !important;
+    max-width: 720px;         /* 취향: 너무 넓지 않게 */
+    margin: 0 auto;           /* ✅ 가운데 정렬 */
+    display: block;
+  }
+
+  /* 닫기 버튼은 고정(스크롤해도 항상 보이게) */
+  .popup > p{
+    position: fixed;         /* 또는 fixed도 가능 */
+    top: 14px;
+    right: 24px;
+    z-index: 10;
+  }
+
+  /* 카드뉴스 2x2 -> 1열로 (세로로 쭉) */
+  .popup_imgbox{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+  }
+
+  .popup_imgbox img{
+    width: 100% !important;
+    display: block;
+  }
+	.skills{
+		padding: 2em;
+		justify-content: flex-start;
+		gap: 10px calc(10% / 5);
+	}
+
+	.skills img {
+        width: 15%;
+    }
+	/* 기존 */
+
+
+#section4{
+  padding: 0 !important;
+}
+#section4 .inner{
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+}
+#section4 .fp-tableCell{
+  height: 100vh !important;
+  display: flex !important;
+}
+
+/* ✅ overflow는 x/y 분리해서 처리 */
+#section4,
+#section4 .fp-tableCell,
+#section4 .inner{
+  overflow-x: visible !important;
+  overflow-y: hidden !important;
+}
+
+#section4 .about{
+  width: min(88vw, 540px);
+  height: 100%;
+  position: relative;
+  height: auto;
+  text-align: center;
+ padding: 0 16px 140px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: visible !important;
+}
+#section4 .about h2{
+	margin-top: -30px;
+	font-size: 20px;
+}
+#section4 .about h2 .light{
+	font-size: 15px;
+}
+#section4 .about p{
+	margin-top: -25px;
+}
+/* 텍스트를 wave 위로 */
+#section4 .about > h1,
+#section4 .about > h2,
+#section4 .about > p{
+  position: relative;
+  z-index: 1;
+}
+
+#section4 .wave_wrap{
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  pointer-events: none;
+}
+
+#section4 .waves{
+  width: 100%;
+  height: 160px;
+  display: block;
+  transform: none;
+}
+
+#section4 .self_photo{
+  width: min(88vw, 420px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+.resume_timeline_wrap{
+	width: 85%;
+	margin: 0 auto;
+}
+
+}
+
+@media (max-width:699px){
+
+  /* footer 아이콘만 숨기기 */
+  #section8 .footer > li img{
+    display: none;
+  }
+
+  /* 아이콘이 사라진 만큼 간격도 정리 */
+  #section8 .footer li{
+    gap: 0;
+  }
+    #section8 .footer_text p{
+    font-size: clamp(12px, 2.2vw, 14px);
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+  #section8 .copyright{
+    text-align: center;
+    font-size: clamp(11px, 2.2vw, 12px);
+    line-height: 1.35;
+    white-space: normal; /* copyright는 줄바꿈 가능 */
+  }
+
+  /* ✅ span.jump를 줄바꿈 지점으로 사용 */
+  #section8 .copyright .jump{
+    display: block;
+    margin-top: 2px;
+  }
+}
+
+/* 599px 이하 */
+@media (max-width:599px) {
+	#menu {
+		display: none;
+	}
+
+	.resume li {
+		width: 100%;
+	}
+
+	.skills{
+		gap: 10px calc(10% / 4);
+	}
+
+	.skills img {
+        width: 18%;
+    }
+#section5 .resume_icon{
+	padding-top: 20px;
+}	
+  /* 1) 선 + dot 숨기기 */
+  #section5 .tl::before,
+  #section6 .tl::before{
+    display: none !important;
+  }
+  #section5 .dot,
+  #section6 .dot{
+    display: none !important;
+  }
+
+  /* 2) 래퍼는 화면에 꽉(좌우 10px 정도만) */
+  #section5 .resume_timeline_wrap,
+  #section6 .resume_timeline_wrap{
+    width: 100% !important;
+    padding: 0 10px;          /* ✅ 좌우 여백 */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* 3) left/right 구분 제거: 전부 1열로 */
+  #section5 .item,
+  #section6 .item{
+    display: flex !important;
+    justify-content: center;   /* grid/flex 영향 제거 */
+    width: 100%;
+  }
+
+  /* 4) 박스는 가로 전체 차지 */
+  #section5 .resume_box,
+  #section6 .resume_box{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto 16px;          /* 카드 간격 */
+    text-align: left;
+  }
+
+  /* 5) 타이틀 줄 정렬도 통일 */
+  #section5 .resume_title,
+  #section6 .resume_title{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+	align-items: center;
+  }
+    #section5 .resume_box h3, #section6 .resume_box h3{
+    font-size: clamp(16px, 1.6vw, 18px);
+    line-height: 1.25;
+  }
+
+  #section5 .resume_box h4, #section6 .resume_box h4{
+    font-size: clamp(14px, 1.3vw, 16px);
+    padding: 2px 7px;
+    margin-left: 10px;
+  }
+
+  #section5 .resume_box p, #section6 .resume_box p{
+    font-size: clamp(14px, 1.25vw, 14px);
+    line-height: 1.55;
+  }
+
+  #section6{
+	margin-top: -120px;
+  }
+  /* animation */
+   #section5 .resume_box,
+  #section6 .resume_box{
+ /* transform: translateY(-5px); */
+animation: floating 2.8s cubic-bezier(.4,0,.6,1) infinite;
+  }
+
+  /* 카드마다 살짝 시간차 주면 더 자연스러움 */
+  #section5 .item:nth-child(odd) .resume_box,
+  #section6 .item:nth-child(odd) .resume_box{
+    animation-delay: 0.3s;
+  }
+/* section5 & section6 resume */
+
+}
+
+@media (max-width:513px){
+  #section7{
+    padding-bottom: 30px;
+  }
+  #section7 h1{
+	margin-top: 50px;
+  }
+  #section7 .skill{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(30px, 3vw, 28px);   /* 가로 간격 */
+    row-gap: clamp(70px, 8vw, 120px); /* ✅ 줄 간격(윗줄 라벨 보호) */
+    align-items: flex-start;       /* ✅ 두 번째 줄이 위로 침범하지 않게 */
+  }
+}
+
+/* 499px 이하 */
+@media (max-width:499px) {
+	.skills{
+		gap: 10px calc(10% / 2);
+	}
+
+	.skills img {
+        width: 30%;
+    }
+	/* 기존 */
+
+#section5 .resume_icon{
+	padding-top: 20px;
+}	
+  /* 1) 선 + dot 숨기기 */
+  #section5 .tl::before,
+  #section6 .tl::before{
+    display: none !important;
+  }
+  #section5 .dot,
+  #section6 .dot{
+    display: none !important;
+  }
+
+  /* 2) 래퍼는 화면에 꽉(좌우 10px 정도만) */
+  #section5 .resume_timeline_wrap,
+  #section6 .resume_timeline_wrap{
+    width: 100% !important;
+    padding: 0 10px;          /* ✅ 좌우 여백 */
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* 3) left/right 구분 제거: 전부 1열로 */
+  #section5 .item,
+  #section6 .item{
+    display: flex !important;
+    justify-content: center;   /* grid/flex 영향 제거 */
+    width: 100%;
+  }
+
+  /* 4) 박스는 가로 전체 차지 */
+  #section5 .resume_box,
+  #section6 .resume_box{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto 16px;          /* 카드 간격 */
+    text-align: left;
+  }
+
+  /* 5) 타이틀 줄 정렬도 통일 */
+  #section5 .resume_title,
+  #section6 .resume_title{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+	align-items: center;
+  }
+    #section5 .resume_box h3, #section6 .resume_box h3{
+    font-size: clamp(16px, 1.6vw, 18px);
+    line-height: 1.25;
+  }
+
+  #section5 .resume_box h4, #section6 .resume_box h4{
+    font-size: clamp(14px, 1.3vw, 16px);
+    padding: 2px 7px;
+    margin-left: 10px;
+  }
+
+  #section5 .resume_box p, #section6 .resume_box p{
+    font-size: clamp(14px, 1.25vw, 14px);
+    line-height: 1.55;
+  }
+
+  #section6{
+	margin-top: -120px;
+  }
+  /* animation */
+   #section5 .resume_box,
+  #section6 .resume_box{
+ /* transform: translateY(-5px); */
+animation: floating 2.8s cubic-bezier(.4,0,.6,1) infinite;
+  }
+
+  /* 카드마다 살짝 시간차 주면 더 자연스러움 */
+  #section5 .item:nth-child(odd) .resume_box,
+  #section6 .item:nth-child(odd) .resume_box{
+    animation-delay: 0.3s;
+  }
+/* section5 & section6 resume */
+  #section8 .footer{
+    position: static !important;     /* absolute 해제 */
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 0 10px;                /* 좌우 10px 여백 */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  /* ✅ li를 한 줄 전체로 */
+  #section8 .footer > li{
+    width: 100% !important;
+    flex: 0 0 100% !important;
+	display: flex; 
+	justify-content: center;
+  }
+    #section8 .footer > li > .call,
+  #section8 .footer > li > .mail,
+  #section8 .footer > li > .footer_text{
+    display: flex;
+    flex-direction: column;        /* ✅ 아이콘 위, 텍스트 아래 */
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+  }
+  #section8 .sns_personal,
+  #section8 .sns_marketing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #section8 .sns_link{
+    display: flex;
+    flex-direction: column;   /* 링크 2개 세로로 */
+    align-items: center;
+    gap: 6px;
+  }
+  .footer_text{
+	gap: 10px;
+  }
+
+  #section8 .copyright{
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    margin-top: 20px !important;  /* footer보다 20px 아래 */
+    text-align: center;
+  }
+
+  /* ✅ myContent의 margin-top은 빼는 게 안전 (전체가 내려가면서 겹침처럼 보일 수 있음) */
+ #section8 .myContent{
+    height: auto !important;
+    padding: 20px 0 30px !important; /* 아래 여유 */
+  }
+
+}
+
+
+/* 374px 이하 */
+@media (max-width: 374px) {
+	.popup ul {
+		padding: 20px;
+	}
+	#section5 .resume_timeline_wrap, #section6 .resume_timeline_wrap{
+	width: 65%;
+	margin: 0 auto;
+}
+}
