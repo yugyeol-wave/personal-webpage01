@@ -258,9 +258,10 @@ h6 {
 }
 
 .portfolio h3 {
-	color: #F9FDFF;  
-	text-shadow: 0 0 5px #3e5c71;
+	color: #3E5C71;  
+	text-shadow: 0 0 5px #3e5c71b2;
 	margin: 15px 0 15px;
+  font-weight: 500;
 }
 
 
@@ -2019,4 +2020,5 @@ animation: floating 2.8s cubic-bezier(.4,0,.6,1) infinite;
     background-color: #88b0cd93;
     border-radius: 10px;
     border: 3px solid #ffffff;
+
   }
